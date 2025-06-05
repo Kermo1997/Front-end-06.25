@@ -1,0 +1,16 @@
+<label>Ülalpeetavad</label>
+<select [(ngModel)]="ylalpeetavad" (ngModelChange)="uunedaLimiit()">
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+</select> <br>
+<label>Netosissetulek</label>
+<input [(ngModel)]="netosissetulek" (ngModelChange)="uunedaLimiit()" type="text"> <br>
+<label>Kohustused</label>
+<input [(ngModel)]="kohustused" (ngModelChange)="uunedaLimiit()" type="text"> <br>
+
+<div>Maksimaalne pakutav limiit</div>
+<div>{{limiit}} $</div>

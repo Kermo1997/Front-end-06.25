@@ -1,0 +1,21 @@
+<button (click)="reset()">reset</button>
+<br>
+<button (click)="sorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="sorteeriZA()">Sorteeri Z-A</button>
+<button (click)="sorteeriTahedkasv()">Sorteeri tähed kasvavalt</button>
+<button (click)="sorteeriTahedkah()">Sorteeri tähed kahanevalt</button>
+<button (click)="sorteeriKolmasTahtAZ()">Sorteeri kolmas täht A-Z</button>
+
+<br><br>
+<button (click)="filtreeriIgaloppevad()">Jäta alles i'ga lõppevad</button>
+<button (click)="filtreeri6Tahelised()">Jäta alles täpselt 6 tähelised</button>
+<button (click)="filtreeriKuni7Tahelised()">Jäta alles kuni 7 tähelised</button>
+<button (click)="filtreerikellelLyhendEs()">Jäta alles kellel on lühend 'es'</button>
+<button (click)="filtreeriTeineTahtE()">Jäta alles kellel teine täht on 'e'</button>
+<br><br>
+
+<div>Autode koguarv: {{autod.length}} tk</div>
+
+@for (auto of autod; track $index) {
+    <div>{{auto}}</div>
+}
