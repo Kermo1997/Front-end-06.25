@@ -1,1 +1,23 @@
-<p>tooted works!</p>
+<div>Tooteid kokku: {{tooted.length}}</div><br>
+
+<button (click)="reset()">reset</button><br>
+<br>
+<button (click)="sorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="sorteeriZA()">Sorteeri Z-A</button>
+<button (click)="sorteeriTahedkasv()">Sorteeri tähed kasvavalt</button>
+<button (click)="sorteeriTahedkah()">Sorteeri tähed kahanevalt</button>
+<button (click)="sorteeriTeineTahtAZ()">Sorteeri teine täht A-Z</button>
+<br><br>
+<button (click)="filtreeri6Tahelised()">Jäta alles kuni 6 tähelised</button>
+<button (click)="filtreeriT2pselt6tahelised()">Jäta alles täpselt 6 tähelised</button>
+<button (click)="filtreeriAL6ppevad()">a'ga lõppevad</button>
+<button (click)="filtreeriYgal6ppevad()">y'ga lõppevad</button>
+<button (click)="filtreeriPaarisArv()">paaristähti arv sisalduvaid</button>
+<br><br>
+
+
+
+
+@for (toode of tooted; track $index) {
+    <div>{{toode}}</div>
+}

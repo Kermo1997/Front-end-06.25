@@ -1,1 +1,25 @@
-<p>tootajad works!</p>
+<button (click)="reset()">reset</button><br>
+<br>
+<button (click)="sorteeriAZ()">Sorteeri A-Z</button>
+<button (click)="sorteeriZA()">Sorteeri Z-A</button>
+<button (click)="sorteeriTahedkasv()">Sorteeri tähed kasvavalt</button>
+<button (click)="sorteeriTahedkah()">Sorteeri tähed kahanevalt</button>
+<button (click)="sorteeriTeineTahtAZ()">Sorteeri teine täht A-Z</button>
+<br><br>
+<button (click)="filtreeriT2pselt3()">Täpselt 3 tähelised</button>
+<button (click)="filtreeriRohkemKui5()">Rohkem kui 5 tähelised</button>
+<button (click)="filtreeriAi()">"ai" lühendit sisaldavad</button>
+<button (click)="filtreeri4T2hti()">Kellel on neljas täht "i"</button>
+<button (click)="filtreeriMalgavad()">'M' tähega algavad</button>
+<button (click)="filtreeriPaarisarvT2hti()">Huvitav: Paarisarv tähti</button>
+<br><br>
+<button (click)="filtreeriIgal6ppevad()">filtreeri i'ga lõppevad</button>
+<button (click)="filtreeriV2hemalt5t2helised()">vähemalt 5 tähelised</button>
+<button (click)="filtreeriT2pselt6t2helised()">täpselt 6 tähelised</button>
+<button (click)="filtreeriANsisaldavat()">"an" lühendit sisaldavad</button>
+<button (click)="filtreeri3T2htOni()">kellel on 3s täht "i"</button>
+<br><br>
+
+@for (tootaja of tootajad; track $index) {
+    <div>{{tootaja}}</div>
+}

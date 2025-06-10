@@ -9,4 +9,13 @@ import { Component } from '@angular/core';
 export class OstukorvComponent {
   tooted = ["coca","sprite","fanta","red bull"];
 
+  kustuta(index: number){
+    this.tooted.splice(index,1);
+  }
+  arvutakogusumma() {
+    let summa = 0;
+    this.tooted.forEach(toode => summa = summa + toode.length);
+    return summa;
+  }
+
 }
